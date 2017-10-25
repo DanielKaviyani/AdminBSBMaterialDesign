@@ -1,0 +1,118 @@
+.rtl .sidebar
+{
+    left: initial;
+    right: 0;
+}
+
+.rtl section.content
+{
+    margin: 100px 315px 0 15px;
+}
+
+.rtl .ls-closed section.content 
+{
+    margin: 100px 15px 0 15px;
+}
+
+.rtl .sidebar .user-info
+{
+    direction: rtl;
+}
+
+.rtl .sidebar .user-info .info-container .user-helper-dropdown
+{
+    right: initial;
+    left:-3px;
+}
+
+.rtl .dropdown-menu.pull-right
+{
+    left:0;
+    right: auto;
+}
+
+.rtl .sidebar .menu .list .header
+{
+    text-align: right;
+}
+
+.rtl .sidebar .menu .list a
+{
+    direction: rtl;
+}
+
+.rtl .sidebar .menu .list .menu-toggle:after,.rtl .sidebar .menu .list .menu-toggle:before
+{
+    right:initial;
+    left:17px;
+}
+
+.rtl .right-sidebar.open
+{
+    left:0;
+}
+
+.rtl .right-sidebar
+{
+    left:-300px;
+}
+
+.rtl .sidebar .legal
+{
+    direction: rtl;
+}
+
+.rtl .info-box
+{
+    direction: rtl;
+}
+
+.rtl .info-box.hover-expand-effect:after
+{
+    left:initial;
+    right: 80px;
+}
+
+.rtl .ls-closed .sidebar
+{
+    margin-left: 0;
+    margin-right: -300px;
+}
+
+.rtl .overlay-open .sidebar
+{
+    margin-left: 0;
+    margin-right: 0;
+}
+
+@media (min-width: 768px) 
+{
+    .rtl .navbar-right .dropdown-menu 
+    {
+        right: initial;
+        left: 0;
+    }
+    .rtl .navbar-right .dropdown-menu-left 
+    {
+        right: 0;
+        left: initial;
+    }
+    .navbar-left 
+    {
+        float: right !important;
+    }
+    .navbar-right 
+    {
+        float: left !important;
+        margin-right: -15px;
+    }
+    .navbar-right ~ .navbar-right 
+    {
+        margin-right: 0;
+    }
+  
+    .navbar-header 
+    {
+        float: right;
+    }
+}
