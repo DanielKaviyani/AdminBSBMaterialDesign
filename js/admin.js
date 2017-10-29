@@ -455,4 +455,10 @@ $(function () {
     $.AdminBSB.search.activate();
 
     setTimeout(function () { $('.page-loader-wrapper').fadeOut(); }, 50);
+    $('#dir-selector').click(function(){
+        if( $(this).is(':checked' ) )
+            $('body').addClass('rtl');
+        else
+            $('body').removeClass('rtl');
+    });
 });

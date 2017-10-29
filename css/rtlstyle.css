@@ -6,13 +6,9 @@
 
 .rtl section.content
 {
-    margin: 100px 315px 0 15px;
+    margin: 100px 315px 0 15px !important;
 }
 
-.rtl .ls-closed section.content 
-{
-    margin: 100px 15px 0 15px;
-}
 
 .rtl .sidebar .user-info
 {
@@ -85,7 +81,105 @@
     margin-right: 0;
 }
 
-@media (min-width: 768px) 
+.rtl .search-bar .search-icon
+{
+    left:initial;
+    right:14px;
+}
+
+.rtl .search-bar .close-search
+{
+    right:initial;
+    left:18px;
+}
+
+.rtl .search-bar input[type="text"]
+{
+    text-align: right;
+}
+
+.rtl .block-header
+{
+    text-align: right;
+}
+
+.rtl .card .header .header-dropdown .dropdown-menu li
+{
+    text-align: right;
+}
+
+.rtl .card .header .header-dropdown
+{
+    right: initial;
+    left:-15px;
+}
+
+.rtl .card .header h2
+{
+    text-align: right;
+}
+
+.rtl .header .col-xs-12:not(.align-right)
+{
+    float:right;
+}
+
+.rtl .header .align-right
+{
+    text-align:left;
+    left:50px;
+}
+
+.rtl .card
+{
+    text-align: right;
+}
+
+.rtl .dashboard-stat-list li .pull-right
+{
+    float:left !important;
+}
+
+.rtl .table
+{
+    direction: rtl;
+    text-align: right;
+}
+
+.rtl .table thead tr th
+{
+    direction: rtl;
+    text-align: right;
+}
+
+.rtl.ls-closed .sidebar
+{
+    margin-right: -300px;
+    margin-left: initial;
+}
+
+.rtl.overlay-open .sidebar 
+{
+    margin-right: 0;
+    margin-left: initial;
+}
+
+.rtl.ls-closed .bars:after, .rtl.ls-closed .bars:before
+{
+    left:initial;
+    right:20px;
+}
+
+.rtl.overlay-open .bars:after
+{
+    -moz-transform: scale(-1);
+    -ms-transform: scale(-1);
+    -o-transform: scale(-1);
+    -webkit-transform: scale(-1);
+    transform: scale(-1);
+}
+
+@media (max-width: 1170px)
 {
     .rtl .navbar-right .dropdown-menu 
     {
@@ -97,22 +191,53 @@
         right: 0;
         left: initial;
     }
-    .navbar-left 
+    
+    
+    .rtl .navbar-left 
     {
         float: right !important;
     }
-    .navbar-right 
+    .rtl .navbar-right 
     {
         float: left !important;
         margin-right: -15px;
+        display: flex;
     }
-    .navbar-right ~ .navbar-right 
+
+    .rtl .navbar-right  li:first-child 
+    {
+      order: 4;
+    }
+    .rtl .navbar-right  li:nth-child(2) 
+    {
+      order: 3;
+    }
+    .rtl .navbar-right  li:nth-child(3) 
+    {
+      order: 2;
+    }
+    .rtl .navbar-right  li:nth-child(4) 
+    {
+      order: 1;
+    }
+    
+    .rtl .navbar-right ~ .navbar-right 
     {
         margin-right: 0;
     }
   
-    .navbar-header 
+    .rtl .navbar-header 
     {
         float: right;
+        margin-right:20px;
     }
+    
+    .rtl section.content
+    {
+        margin: 100px 15px 0 15px !important;
+    }
+    
 }
+
+
+
