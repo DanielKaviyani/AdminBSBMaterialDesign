@@ -1,5 +1,6 @@
 $(function () {
     skinChanger();
+    directionChanger();
     activateNotificationAndTasksScroll();
 
     setSkinListHeightAndScroll(true);
@@ -8,7 +9,30 @@ $(function () {
         setSkinListHeightAndScroll(false);
         setSettingListHeightAndScroll(false);
     });
+    
 });
+
+// Direction changer
+function directionChanger()
+{
+    $('#dir-selector').click(function(){
+        if( $(this).is(':checked' ) )
+        {
+            $('body').addClass('rtl');
+            localStorage.setItem('is_rtl','true');
+        }
+        else
+        {
+            $('body').removeClass('rtl');
+            localStorage.setItem('is_rtl','false');
+        }
+    });
+    if( localStorage.getItem('is_rtl') === 'true' )
+    {
+        $('body').addClass('rtl');
+        $('#dir-selector').attr('checked','checked');
+    }
+}
 
 //Skin changer
 function skinChanger() {
@@ -22,7 +46,15 @@ function skinChanger() {
         $this.addClass('active');
 
         $body.addClass('theme-' + $this.data('theme'));
+        localStorage.setItem('template_theme',$this.data('theme'));
     });
+    if( !( localStorage.getItem('template_theme') === null ) )
+    {
+        $('.right-sidebar .demo-choose-skin li.active').removeClass('active');
+        $('.right-sidebar .demo-choose-skin li[data-theme='+localStorage.getItem('template_theme')+']').addClass('active');
+        $('body').removeClass('theme-red');
+        $('body').addClass('theme-' + localStorage.getItem('template_theme'));
+    }
 }
 
 //Skin tab content set height and show scroll

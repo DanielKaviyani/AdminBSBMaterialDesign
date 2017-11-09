@@ -4,15 +4,109 @@
     right: 0;
 }
 
-.rtl section.content
+.rtl .sidebar .legal,
+.rtl .sidebar .user-info,
+.rtl .sidebar .menu .list a,
+.rtl .demo-google-material-icon,
+.rtl .info-box,
+.rtl .info-box-2,
+.rtl .info-box-3,
+.rtl .info-box-4
 {
-    margin: 100px 315px 0 15px !important;
+    direction: rtl;
+}
+
+.rtl .sidebar .menu .list .header,
+.rtl .card,
+.rtl .card .header h2,
+.rtl .search-bar input[type="text"],
+.rtl .demo-icon-container .demo-google-material-icon,
+.rtl .block-header,
+.rtl .card .header .header-dropdown .dropdown-menu li,
+.rtl .form-group .form-control,
+.rtl .bootstrap-select.btn-group .dropdown-toggle .filter-option,
+.rtl .bootstrap-select.btn-group .dropdown-menu li
+{
+    text-align: right;
+}
+
+.rtl .header .col-xs-12:not(.align-right),
+.rtl .progress-bar,
+.rtl .dd-item button,
+.rtl .nav-tabs li
+{
+    float:right;
+}
+
+.rtl .btn:not(.btn-link):not(.btn-circle) span
+{
+    float:left;
+}
+
+.rtl .bootstrap-select.btn-group .dropdown-toggle .caret
+{
+    right:initial;
+    left:0px;
+}
+
+.rtl .bootstrap-select.btn-group.show-tick .dropdown-menu li.selected a span.check-mark
+{
+    right:initial;
+    left:15px;
+}
+
+.rtl .bootstrap-select.btn-group.show-tick .dropdown-menu li a span.text
+{
+    margin-right: 5px;
+}
+
+.rtl [type="checkbox"].filled-in + label:before,.rtl  [type="checkbox"].filled-in + label:after
+{
+    right:0;
+    left: initial;
+}
+
+.rtl [type="checkbox"].filled-in + label:before,.rtl [type="checkbox"].filled-in + label:after
+{
+    left:initial;
+    right: 10px;
+}
+.rtl [type="checkbox"].filled-in + label:after
+{
+    left:initial;
+    right: 0px;
+}
+
+.rtl [type="checkbox"] + label
+{
+    padding-left: initial;
+    padding-right: 26px;
 }
 
 
-.rtl .sidebar .user-info
+
+
+
+.rtl [type="checkbox"] + label:before
 {
-    direction: rtl;
+    left:initial;
+    right: 10px;
+}
+.rtl  [type="checkbox"]:not(.filled-in) + label:after
+{
+    left:initial;
+    right: 0;
+}
+
+.rtl .form-group .form-line .form-label
+{
+    left: initial;
+    right: 0;
+}
+
+.rtl section.content
+{
+    margin: 100px 315px 0 15px !important;
 }
 
 .rtl .sidebar .user-info .info-container .user-helper-dropdown
@@ -27,15 +121,6 @@
     right: auto;
 }
 
-.rtl .sidebar .menu .list .header
-{
-    text-align: right;
-}
-
-.rtl .sidebar .menu .list a
-{
-    direction: rtl;
-}
 
 .rtl .sidebar .menu .list .menu-toggle:after,.rtl .sidebar .menu .list .menu-toggle:before
 {
@@ -53,20 +138,25 @@
     left:-300px;
 }
 
-.rtl .sidebar .legal
+.rtl .info-box-3 .icon,
+.rtl .info-box-4 .icon
 {
-    direction: rtl;
-}
-
-.rtl .info-box
-{
-    direction: rtl;
+    right:initial;
+    left:10px;
 }
 
 .rtl .info-box.hover-expand-effect:after
 {
     left:initial;
-    right: 80px;
+    right:80px;
+}
+
+.rtl .info-box-2.hover-expand-effect:after,
+.rtl .info-box-3.hover-expand-effect:after,
+.rtl .info-box-4.hover-expand-effect:after
+{
+    left:initial;
+    right: 0px;
 }
 
 .rtl .ls-closed .sidebar
@@ -93,35 +183,11 @@
     left:18px;
 }
 
-.rtl .search-bar input[type="text"]
-{
-    text-align: right;
-}
-
-.rtl .block-header
-{
-    text-align: right;
-}
-
-.rtl .card .header .header-dropdown .dropdown-menu li
-{
-    text-align: right;
-}
 
 .rtl .card .header .header-dropdown
 {
     right: initial;
     left:-15px;
-}
-
-.rtl .card .header h2
-{
-    text-align: right;
-}
-
-.rtl .header .col-xs-12:not(.align-right)
-{
-    float:right;
 }
 
 .rtl .header .align-right
@@ -130,22 +196,13 @@
     left:50px;
 }
 
-.rtl .card
-{
-    text-align: right;
-}
 
 .rtl .dashboard-stat-list li .pull-right
 {
     float:left !important;
 }
 
-.rtl .table
-{
-    direction: rtl;
-    text-align: right;
-}
-
+.rtl .table,
 .rtl .table thead tr th
 {
     direction: rtl;
@@ -190,11 +247,11 @@
     left: initial;
 }
 
-
 .rtl .navbar-left 
 {
     float: right !important;
 }
+
 .rtl .navbar-right 
 {
     float: left !important;
@@ -204,19 +261,19 @@
 
 .rtl .navbar-right  li:first-child 
 {
-  order: 4;
+    order: 4;
 }
 .rtl .navbar-right  li:nth-child(2) 
 {
-  order: 3;
+    order: 3;
 }
 .rtl .navbar-right  li:nth-child(3) 
 {
-  order: 2;
+    order: 2;
 }
 .rtl .navbar-right  li:nth-child(4) 
 {
-  order: 1;
+    order: 1;
 }
 
 .rtl .navbar-right ~ .navbar-right 
@@ -229,7 +286,18 @@
     float: right;
     margin-right:20px;
 }
-    
+
+.rtl .demo-icon-container .demo-google-material-icon .icon-name
+{
+    left: initial;
+    right: 7px;
+}
+
+.rtl .dd-list
+{
+    text-align: left;
+}
+
 @media (max-width: 1169px)
 {
     .rtl .navbar-toggle
