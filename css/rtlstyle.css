@@ -25,7 +25,8 @@
 .rtl .card .header .header-dropdown .dropdown-menu li,
 .rtl .form-group .form-control,
 .rtl .bootstrap-select.btn-group .dropdown-toggle .filter-option,
-.rtl .bootstrap-select.btn-group .dropdown-menu li
+.rtl .bootstrap-select.btn-group .dropdown-menu li,
+.rtl .dropdown-menu li a
 {
     text-align: right;
 }
@@ -33,7 +34,8 @@
 .rtl .header .col-xs-12:not(.align-right),
 .rtl .progress-bar,
 .rtl .dd-item button,
-.rtl .nav-tabs li
+.rtl .nav-tabs li,
+.rtl .user-info .dropdown-menu li a i.material-icons
 {
     float:right;
 }
@@ -84,18 +86,39 @@
 }
 
 
-
-
-
-.rtl [type="checkbox"] + label:before
+.rtl [type="checkbox"] + label
 {
-    left:initial;
-    right: 10px;
+    margin-left: 11px;
+    padding-left: initial;
+    padding-right: 26px;
 }
-.rtl  [type="checkbox"]:not(.filled-in) + label:after
+
+.rtl [type="checkbox"]:checked:not(.filled-in) + label:before
+{
+    right: 0px;
+}
+
+.rtl [type="checkbox"] + label:before, .rtl [type="checkbox"]:not(.filled-in) + label:after
+{
+    left: initial;
+    right: -10px;
+}
+
+.rtl [type="radio"] + label
+{
+    margin-left: 24px;
+    padding-left: initial;
+}
+
+.rtl [type="radio"] + label:before, .rtl [type="radio"] + label:after
 {
     left:initial;
-    right: 0;
+    right: -22px;
+}
+
+.rtl .form-control
+{
+    direction: rtl;
 }
 
 .rtl .form-group .form-line .form-label
@@ -197,13 +220,15 @@
 }
 
 
-.rtl .dashboard-stat-list li .pull-right
+.rtl .dashboard-stat-list li .pull-right,
+.rtl .dropdown-menu ul.menu.tasks h4 small
 {
     float:left !important;
 }
 
 .rtl .table,
-.rtl .table thead tr th
+.rtl .table thead tr th,
+.rtl .table tfoot tr th
 {
     direction: rtl;
     text-align: right;
@@ -215,7 +240,7 @@
     margin-left: initial;
 }
 
-.rtl.overlay-open .sidebar 
+.rtl.overlay-open .sidebar
 {
     margin-right: 0;
     margin-left: initial;
@@ -236,52 +261,52 @@
     transform: scale(-1);
 }
 
-.rtl .navbar-right .dropdown-menu 
+.rtl .navbar-right .dropdown-menu
 {
     right: initial;
     left: 0;
 }
-.rtl .navbar-right .dropdown-menu-left 
+.rtl .navbar-right .dropdown-menu-left
 {
     right: 0;
     left: initial;
 }
 
-.rtl .navbar-left 
+.rtl .navbar-left
 {
     float: right !important;
 }
 
-.rtl .navbar-right 
+.rtl .navbar-right
 {
     float: left !important;
     margin-right: -15px;
     display: flex;
 }
 
-.rtl .navbar-right  li:first-child 
+.rtl .navbar-right  li:first-child
 {
     order: 4;
 }
-.rtl .navbar-right  li:nth-child(2) 
+.rtl .navbar-right  li:nth-child(2)
 {
     order: 3;
 }
-.rtl .navbar-right  li:nth-child(3) 
+.rtl .navbar-right  li:nth-child(3)
 {
     order: 2;
 }
-.rtl .navbar-right  li:nth-child(4) 
+.rtl .navbar-right  li:nth-child(4)
 {
     order: 1;
 }
 
-.rtl .navbar-right ~ .navbar-right 
+.rtl .navbar-right ~ .navbar-right
 {
     margin-right: 0;
 }
 
-.rtl .navbar-header 
+.rtl .navbar-header
 {
     float: right;
     margin-right:20px;
@@ -298,32 +323,64 @@
     text-align: left;
 }
 
+.rtl .sidebar .menu .list .ml-menu li a
+{
+    padding-left: initial;
+    padding-right: 55px;
+}
+
+.rtl .sidebar .menu .list .ml-menu li .ml-menu li a
+{
+    padding-left: initial;
+    padding-right: 80px;
+}
+
+.rtl .sidebar .menu .list .ml-menu li .ml-menu .ml-menu li a
+{
+    padding-left: initial;
+    padding-right: 95px;
+}
+
+.rtl .user-info .dropdown-menu li a i.material-icons
+{
+    margin-right: initial;
+    margin-left: 7px;
+}
+
+.rtl .dropdown-menu ul.menu .icon-circle
+{
+    float:right;
+}
+
+.rtl .dropdown-menu ul.menu .menu-info
+{
+    left:initial;
+    right:5px;
+}
+
 @media (max-width: 1169px)
 {
     .rtl .navbar-toggle
     {
         float:left;
     }
-    
+
     .rtl .navbar .navbar-toggle
     {
         margin-right:initial;
         margin-left:40px;
     }
-    
+
     .rtl .navbar > .container .navbar-brand,.rtl .navbar > .container-fluid .navbar-brand
     {
         text-align: right;
         float:right;
     }
-    
-    
+
+
     .rtl section.content
     {
         margin: 100px 15px 0 15px !important;
     }
-    
+
 }
-
-
-
